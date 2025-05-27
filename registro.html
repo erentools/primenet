@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('fondo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    header {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header img {
+      width: 40px;
+      height: 40px;
+    }
+    nav a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .form-container {
+      padding: 40px 20px;
+      max-width: 400px;
+      margin: auto;
+      text-align: center;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 6px;
+    }
+    #submitBtn {
+      display: none;
+      padding: 12px;
+      background: #0ff;
+      border: none;
+      font-weight: bold;
+      border-radius: 6px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo">
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="login.html">Iniciar Sesión</a>
+      <a href="registro.html">Registrarse</a>
+    </nav>
+  </header>
+
+  <div class="form-container">
+    <h2>Registro</h2>
+    <form id="registroForm" onsubmit="event.preventDefault(); enviarDatos();">
+      <input type="text" placeholder="Nombre Completo" required>
+      <input type="text" placeholder="Número de Identificación" required>
+      <input type="email" placeholder="Correo Electrónico" required>
+      <input type="text" placeholder="Crear Usuario" required>
+      <input type="password" placeholder="Contraseña" required>
+      <input type="password" placeholder="Verificar Contraseña" required>
+      <button id="submitBtn" type="submit">Enviar Datos</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('registroForm');
+    const submitBtn = document.getElementById('submitBtn');
+
+    form.addEventListener('input', () => {
+      let allFilled = Array.from(form.elements).every(el => el.value.trim() !== "");
+      submitBtn.style.display = allFilled ? 'block' : 'none';
+    });
+
+    function enviarDatos() {
+      window.location.href = 'enviando.html';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NetPrimeTv - Inicio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('fondo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    header {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header img {
+      width: 40px;
+      height: 40px;
+    }
+    nav a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 10px;
+      padding: 20px;
+    }
+    .grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo">
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="login.html">Iniciar Sesión</a>
+      <a href="registro.html">Registrarse</a>
+    </nav>
+  </header>
+
+  <div class="grid">
+    <img src="p1.jpg" alt="Poster 1">
+    <img src="p2.jpg" alt="Poster 2">
+    <img src="p3.jpg" alt="Poster 3">
+    <img src="p4.jpg" alt="Poster 4">
+    <img src="p5.jpg" alt="Poster 5">
+    <img src="p6.jpg" alt="Poster 6">
+    <img src="p7.jpg" alt="Poster 7">
+    <img src="p8.jpg" alt="Poster 8">
+    <img src="p9.jpg" alt="Poster 9">
+  </div>
+</body>
+</html>
