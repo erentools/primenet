@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -39,6 +40,12 @@
       width: 100%;
       height: auto;
       border-radius: 10px;
+    }
+
+    @media (min-width: 480px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
   </style>
 </head>

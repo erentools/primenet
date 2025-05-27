@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -43,13 +44,14 @@
       border-radius: 6px;
     }
     #submitBtn {
-      display: none;
+      display: block;
       padding: 12px;
       background: #0ff;
       border: none;
       font-weight: bold;
       border-radius: 6px;
       width: 100%;
+      margin-top: 15px;
     }
   </style>
 </head>
@@ -77,14 +79,6 @@
   </div>
 
   <script>
-    const form = document.getElementById('registroForm');
-    const submitBtn = document.getElementById('submitBtn');
-
-    form.addEventListener('input', () => {
-      let allFilled = Array.from(form.elements).every(el => el.value.trim() !== "");
-      submitBtn.style.display = allFilled ? 'block' : 'none';
-    });
-
     function enviarDatos() {
       window.location.href = 'enviando.html';
     }
